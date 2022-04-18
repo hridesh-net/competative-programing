@@ -12,12 +12,18 @@ int main(){
     int m = N;
 
     int mask = 0;
-    while (N != 0){
-        mask = (mask << 1) | 1;
-        N = N >> 1;
+    int ans = 0;
+    if (N == 0){
+        ans = 1;
     }
+    else {
+        while (N != 0){
+            mask = (mask << 1) | 1;
+            N = N >> 1;
+        }
 
-    int ans = (~m) & mask;
+    ans = (~m) & mask;
+    }
 
     cout << ans;
 }
