@@ -16,21 +16,6 @@ int main(){
 
 }
 
-bool poweroftwo(){
-    int N;
-    cin >> N;
-
-    for (int i = 0; i <= 30; i++){
-        int ans = pow(2, i);
-
-        if (ans == N){
-            return true;
-        }
-    }
-    
-    return false;
-}
-
 /* If don't want to use math.h */
 /* bool poweroftwo(){
     int N;
@@ -49,3 +34,18 @@ bool poweroftwo(){
     
     return false;
 } */
+
+bool poweroftwo(){
+    int N;
+    cin >> N;
+
+    for (int i = 0; i <= 30; i++){
+        int ans = pow(2, i);
+
+        if (ans == N){
+            return true;
+        }
+    }
+    
+    return false;
+}
