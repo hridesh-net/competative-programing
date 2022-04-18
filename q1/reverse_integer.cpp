@@ -1,3 +1,7 @@
+/*
+REVERSE OF A NUMBER TAKEN IN THE INTEGER FORM
+*/
+
 #include <iostream>
 
 using namespace std;

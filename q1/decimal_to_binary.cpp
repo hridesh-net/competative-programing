@@ -1,3 +1,7 @@
+/*
+DECIMAL TO BINARY NUMBER
+*/
+
 #include <iostream>
 #include <math.h>
 
