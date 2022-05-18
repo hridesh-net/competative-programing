@@ -26,24 +26,26 @@ int main(){
         cin >> s;
 
         // the process
-        int sum = 0;
-        int j = 0;
+        int sum = arr[0];
+        int start = 0;
 
-        for (int itr = 0; itr < n; itr++){
-            sum = sum + arr[itr];
+        for (int itr = 1; itr <= n; itr++){
 
-            if (sum == s){
-                cout << "sub array is from index" << j << "to" << itr << endl;
+            while (sum > s && start < itr - 1){
+
+                sum = sum - arr[start];
+                start++;
+
                 break;
             }
-            else if(sum > s){
-                itr = j + 1;
-                j = itr;
+
+            if (sum == s){
+                cout << "sum found between indexes " << start << "and " << itr - 1;
             }
-            // else {
-            //     cout << "no sub array found";
-            //     break;
-            // }
+
+            if (itr < n){
+                sum = sum + arr[itr];
+            }
 
         }
 
